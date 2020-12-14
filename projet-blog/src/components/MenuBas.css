@@ -1,0 +1,16 @@
+.menuBas{
+   
+
+    
+}
+.styleButton{
+    border:none;
+	padding:15px 0  15px 0;
+	border-radius:75%;
+	border-bottom:7px solid red;
+	font:bold 13px Arial;
+	color: red;
+	background: white;
+	box-shadow:10px 10px 15px #999;
+    border-top:4px solid black;
+}
