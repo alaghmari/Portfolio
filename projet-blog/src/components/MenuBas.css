@@ -1,16 +1,29 @@
-.menuBas{
-   
-
-    
+.footer{
+	background-color: #343a40!important;
+	color: white !important;
+	 padding: 20px 10px;
 }
-.styleButton{
-    border:none;
+
+
+.styleButton:hover{
+	transform: scale(1.1);
+}
+.styleButton:focus{
+	outline: none;
+}
+
+.menuBas a{
 	padding:15px 0  15px 0;
 	border-radius:75%;
 	border-bottom:7px solid red;
-	font:bold 13px Arial;
-	color: red;
+	font-weight: bold;
+	font-size: 13px;
+	color: black;
 	background: white;
 	box-shadow:10px 10px 15px #999;
-    border-top:4px solid black;
+	border-top:4px solid black;
+	width: 140px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
 }

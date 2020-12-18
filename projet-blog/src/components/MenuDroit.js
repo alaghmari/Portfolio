@@ -1,29 +1,38 @@
 import React, { Component } from 'react';
+import {NavLink} from 'react-router-dom';
+
+import logo from '../logo.png';
 
 import './MenuDroit.css';
 
 
 class MenuDroit extends Component{
-    redirect(destination) {
-        alert('rediriger vers '+destination);   
-       }
-    
-    render() {
-        return(
-            <div className = "menuDroit">
-              <div className = "lien LienHome" onClick = {() => this.redirect('Home')}>
-                Home
-              </div>
-              <div className = "lien LienProjects" onClick = {() =>  this.redirect('Projects')}>
-                Projects
-              </div>
-              <div className = "lien LienBlog" onClick = {() => this.redirect('Blog')}>
-                Blog
-              </div>
-            </div>
+  
+
+
+       render() {
+        return(       
+            <nav className = "menuDroit">
+              <div className="logoBorder">
+                <img src ={logo} alt="It is my logo"></img>
+              </div>  
+             <div className="links-container">
+                <NavLink to="/home">
+                  Home
+                </NavLink>
+                <NavLink to="/projects">
+                  Projects
+                </NavLink>
+                <NavLink to="/blog">
+                  Blog
+                </NavLink>
+                </div>
+              </nav>
 
             )        
     }
-}
+  }
 
 export default MenuDroit;
+
+

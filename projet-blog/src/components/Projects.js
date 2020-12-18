@@ -3,8 +3,9 @@ import React from 'react';
 
 const Projects = () => {
     return (
-        <div className="projects">
-            Projects
+        <div className="container">
+            <h1>Vous êtes bien au niveau des projets</h1>
+            <h2>c'est la rubrique Projects</h2>
         </div>
 
     )

@@ -1,28 +1,44 @@
 import React, { Component} from 'react';
-import {BrowserRooter, Route ,Switch} from 'react-router-dom';
-import MenuHaut from './components/MenuHaut';
-import MenuBas from './components/MenuBas';
-
+import {BrowserRouter, Route ,Switch, Redirect} from 'react-router-dom';
+import Home from './components/Home';
+import Blog from './components/Blog';
 import './App.css';
+import Projects from './components/Projects';
+import ErrorPage from './components/ErrorPage';
+import MenuDroit from './components/MenuDroit';
+import MenuBas from './components/MenuBas';
+import RedirectToHome from './components/RedirectToHome';
+
 
 class App extends Component {
-  state = {
-    page: 'page par défaut'
-}
+ constructor(props) {
+   super(props)
+ 
+   this.state = {
+      defaultPage: {
+        Home: false,
+        Project: false,
+        Blog: true
+      }
+   }
+ }
+ 
+
 
   render () { 
   return (
     <div className="App">
-      <BrowserRooter>
-      <MenuHaut />
-      <switch> 
-        <Route  /> 
-        <Route  /> 
-        <Route  /> 
-        <Route  /> 
-      </switch>
+      <BrowserRouter>
+        <MenuDroit />
+           <Switch>
+            <Route path ="/" component={RedirectToHome} exact={true}/>
+            <Route path="/home"component={Home} exact={true}/>
+            <Route path="/projects"component={Projects} exact={true}/>
+            <Route path="/blog"component={Blog} exact={true}/>  
+            <Route component={ErrorPage}/>
+          </Switch>
       <MenuBas/>
-      </BrowserRooter>
+    </BrowserRouter>
     </div>
   );
 }
