@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-const RedirectToHome = (props) =>{
+const RedirectToHome = (props) => {
    props.history.push('/home')
    return(<div></div>) 
 }

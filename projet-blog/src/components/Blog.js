@@ -2,6 +2,9 @@ import React from 'react';
 
 
 const Blog = () => {
+
+    console.log('props: ');
+
     return (
         <div className="container">
             <h1>Vous êtes bien au niveau du blog</h1>

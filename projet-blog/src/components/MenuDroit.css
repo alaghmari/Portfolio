@@ -22,6 +22,8 @@
 
 
 
+
+
 .links-container a, .links-container a:visited {
     color: white;
     margin-left: 30px;
@@ -39,9 +41,5 @@
   border-bottom: 1px solid red;
   cursor: default;
 }
-.active{
-    color:gray;
-    border-bottom: 1px solid red;
-    cursor: default;
-  
-}
+
+

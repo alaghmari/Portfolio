@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import {BrowserRouter, Route ,Switch, Redirect} from 'react-router-dom';
+import {BrowserRouter, Route ,Switch} from 'react-router-dom';
 import Home from './components/Home';
 import Blog from './components/Blog';
 import './App.css';
@@ -7,34 +7,19 @@ import Projects from './components/Projects';
 import ErrorPage from './components/ErrorPage';
 import MenuDroit from './components/MenuDroit';
 import MenuBas from './components/MenuBas';
-import RedirectToHome from './components/RedirectToHome';
 
 
 class App extends Component {
- constructor(props) {
-   super(props)
  
-   this.state = {
-      defaultPage: {
-        Home: false,
-        Project: false,
-        Blog: true
-      }
-   }
- }
- 
-
-
   render () { 
   return (
     <div className="App">
       <BrowserRouter>
         <MenuDroit />
            <Switch>
-            <Route path ="/" component={RedirectToHome} exact={true}/>
-            <Route path="/home"component={Home} exact={true}/>
-            <Route path="/projects"component={Projects} exact={true}/>
-            <Route path="/blog"component={Blog} exact={true}/>  
+            <Route path ="/" component={Home} exact={true}/>
+            <Route path="/projects"component={Projects} />
+            <Route path="/blog"component={Blog} />  
             <Route component={ErrorPage}/>
           </Switch>
       <MenuBas/>
